@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little Treats</title>
+  <style>
+    :root {
+      bg: #faf3e0;
+      primary: #d9bf77;
+      secondary: #a27c48;
+      text: #5e503f;
+      accent: #c9cba3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .top img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      border: 2px solid var(--accent);
+    }
+
+    .info {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .slider {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 9s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0%); }
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <img src="logo.jpg" alt="Logo">
+    <div class="info">
+      <h1>Little Treats</h1>
+      <p>Homemade Sweets</p>
+      
+    </div>
+  </div>
+
+  <main>
+    <div class="slider">
+      <div class="slides">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.jpg" alt="">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cafe</p>
+  </footer>
+
+</body>
+</html>
