@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little Treats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      position: relative;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .bg-1, .bg-2, .bg-3, .bg-4 {
+      background-color: #c6b66f;
+      color: #ffffff;
+    }
+
+    .padding {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .navbar {
+      padding: 15px 0;
+      font-size: 13px;
+      letter-spacing: 4px;
+      border-radius: 0;
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .navbar-nav > li > a:hover {
+      color: #b5902b !important;
+    }
+
+    .navbar-form {
+      margin: 0 auto;
+    }
+
+    .navbar-form .form-control {
+      width: 250px;
+      transition: 0.3s ease;
+    }
+
+    .navbar-form .form-control:focus {
+      width: 300px;
+      outline: none;
+    }
+
+    .navbar-right .btn {
+      margin-top: 8px;
+      margin-right: 10px;
+    }
+
+    .navbar-nav > li.active > a {
+      background-color: #b5902b !important;
+      color: white !important;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #b5902b;
+    }
+
+    /* Fix overlapping sections below fixed navbar */
+    section {
+      scroll-margin-top: 70px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarContent">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Little Treats</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="nav navbar-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#specials">choco-licious</a></li>
+        <li><a href="indmenu.html">our speacialities</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." name="search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="newwebcontinfo.html" class="btn btn-primary">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="container-fluid bg-1 text-center padding">
+  <h3>Fresh and delicious</h3>
+  <img src="logo.jpg" alt="logo" width="350" height="350">
+</section>
+
+<section class="container-fluid bg-2 text-center padding">
+</section>
+
+<section id="specials" class="container-fluid bg-3 text-center padding">
+  <h3>Our Specialities</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Marshmello Choco Cookies</p>
+      <img src="img1.jpg" alt="Image" width="350" height="500">
+    </div>
+    <div class="col-sm-4">
+      <p>Choco Fudge Brownie</p>
+      <img src="img2.jpg" alt="Image" width="350" height="500">
+    </div>
+    <div class="col-sm-4">
+      <p>Gift box</p>
+      <img src="img3.jpg" alt="Image" width="400" height="500">
+    </div>
+  </div>
+</section>
+
+<section id="footer" class="container-fluid bg-4 text-center padding">
+  <p>Brought to you by <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+</section>
+
+</body>
+</html>

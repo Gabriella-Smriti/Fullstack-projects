@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <style>
+    body {
+      background-color: #887d4c;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      background-color: #c6b66f;
+      width: 90%;
+      max-width: 400px;
+      padding: 30px;
+      margin: 60px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #056105;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h3>Contact Form</h3>
+
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname">
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone">
+
+    <label for="subject">Subject:</label>
+    <select id="subject">
+      <option>Select</option>
+      <option>General</option>
+      <option>Support</option>
+      <option>Feedback</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea rows="4" id="message"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function validateForm() {
+    const name = document.getElementById("First Name").value;
+    const addr = document.getElementById("Last Name").value;
+    const email = document.getElementById("Email").value;
+    const pass = document.getElementById("Phone").value;
+    const sub = document.getElementById("Subject").value;
+    const agree = document.getElementById("Message").checked;
+
+    const nameErr = document.getElementById("First Name-error");
+    const addrErr = document.getElementById("Last Name-error");
+    const emailErr = document.getElementById("Email-error");
+    const passErr = document.getElementById("Phone-error");
+    const subErr = document.getElementById("Subject-error");
+    const agreeErr = document.getElementById("Message-error");
+
+    FirstNameErr.textContent = "";
+    LastNameErr.textContent = "";
+    EmailErr.textContent = "";
+    PhoneErr.textContent = "";
+    SubjectErr.textContent = "";
+    MessageErr.textContent = "";
+
+    let isValid = true;
+
+    if (name === "" || /\d/.test(name)) {
+        nameErr.textContent = "Please enter your name properly.";
+        isValid = false;
+    }
+
+    if (addr === "") {
+        addrErr.textContent = "Please enter your address.";
+        isValid = false;
+    }
+
+    if (email === "" || !email.includes("@") || !email.includes(".")) {
+        emailErr.textContent = "Please enter a valid email address.";
+        isValid = false;
+    }
+
+    if (pass === "" || pass.length < 6) {
+        passErr.textContent = "Please enter a password with at least 6 characters.";
+        isValid = false;
+    }
+
+    if (sub === "") {
+        subErr.textContent = "Please select your course.";
+        isValid = false;
+    }
+
+    if (!agree) {
+        agreeErr.textContent = "Please agree to the above information.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Form submitted successfully!");
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function resetErrors() {
+    document.getElementById("FirstName-error").textContent = "";
+    document.getElementById("LastName-error").textContent = "";
+    document.getElementById("Email-error").textContent = "";
+    document.getElementById("Phone-error").textContent = "";
+    document.getElementById("Subject-error").textContent = "";
+    document.getElementById("Message-error").textContent = "";
+}
+  </script>
+
+</body>
+</html>
